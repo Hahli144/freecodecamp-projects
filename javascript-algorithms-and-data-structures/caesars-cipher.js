@@ -1,4 +1,4 @@
-function rot13(str) { // LBH QVQ VG!
+function rot13(str) {
   return str.split("").map(function (x) {
     x = x.charCodeAt(0);
     if (64 < x && x < 78)
