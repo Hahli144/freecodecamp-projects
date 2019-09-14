@@ -5,10 +5,8 @@ function convertToRoman(num) {
   for (var i=0;i<num.length;i++) {
     if (num[i] < 4)
       romanNum.push(romanSym[i].repeat(num[i]));
-    else if (num[i] == 4)
-      romanNum.push(romanSym[i] + romanSym[i + 4]);
-    else if (num[i] == 5)
-      romanNum.push(romanSym[i + 4]);
+    else if (num[i] < 6)
+      romanNum.push(romanSym[i].repeat(5 - num[i]) + romanSym[i + 4]);
     else if (num[i] < 9)
       romanNum.push(romanSym[i + 4] + romanSym[i].repeat(num[i] - 5));
     else if (num[i] == 9)
