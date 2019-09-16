@@ -16,38 +16,21 @@
     for (var j=0;j<cid.length;j++) {
       after[j][1] = cid[j][1] - after[j][1]
     }
-
-    cid.forEach(function (x) {
+    cid.forEach(function (x, k) {
       x[1] /= 100
+      after[k][1] /= 100
     });
-    after.forEach(function (x) {
-      x[1] /= 100
-    });
-    cid.reverse();
     statement.change = after.reverse().filter(function (x) {
-    return x[1] > 0
-  });
-  if (cid.every(function (x, k) {
-    return x[1] == after[k][1]
-  })) {
-    statement.status = "CLOSED";
-    statement.change = cid.reverse();
-  }
-  else
-    statement.status = "OPEN"
+      return x[1] > 0
+    });
+    if (cid.reverse().every(function (x, k) {
+      return x[1] == after[k][1]
+    })) {
+      statement.status = "CLOSED";
+      statement.change = cid.reverse();
+    }
+    else
+      statement.status = "OPEN"
   }
   return statement;
 }
-
-// Example cash-in-drawer array:
-// [["PENNY", 1.01],
-// ["NICKEL", 2.05],
-// ["DIME", 3.1],
-// ["QUARTER", 4.25],
-// ["ONE", 90],
-// ["FIVE", 55],
-// ["TEN", 20],
-// ["TWENTY", 60],
-// ["ONE HUNDRED", 100]]
-
-console.log(checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]));
