@@ -1,4 +1,4 @@
-  function checkCashRegister(price, cash, cid) {
+function checkCashRegister(price, cash, cid) {
   cid.forEach(function (x) {
     x[1] = Math.round(x[1] * 100);
   });
@@ -12,25 +12,25 @@
         after[i][1] -= unit[i];
       }
   }
-  if (amount == 0) {
-    for (var j=0;j<cid.length;j++) {
-      after[j][1] = cid[j][1] - after[j][1]
-    }
-    cid.forEach(function (x, k) {
-      x[1] /= 100
-      after[k][1] /= 100
-    });
-    statement.change = after.reverse().filter(function (x) {
-      return x[1] > 0
-    });
-    if (cid.reverse().every(function (x, k) {
-      return x[1] == after[k][1]
-    })) {
-      statement.status = "CLOSED";
-      statement.change = cid.reverse();
-    }
-    else
-      statement.status = "OPEN"
+  if (amount != 0)
+    return statement;
+  for (var j=0;j<cid.length;j++) {
+    after[j][1] = cid[j][1] - after[j][1]
   }
+  cid.forEach(function (x, k) {
+    x[1] /= 100
+    after[k][1] /= 100
+  });
+  if (cid.every(function (x, k) {
+    return x[1] == after[k][1]
+  })) {
+    statement.status = "CLOSED";
+    statement.change = cid;
+  }
+  else {
+    statement.status = "OPEN"
+    statement.change = after.reverse().filter(function (x) {
+    return x[1] > 0
+  })};
   return statement;
 }
