@@ -1,7 +1,7 @@
 function checkCashRegister(price, cash, cid) {
   cid.forEach(x => x[1] = Math.round(x[1] * 100));
   var after = cid.map(x => ([...x]));
-  var amount = Math.round(cash * 100 - price * 100);
+  var amount = cash * 100 - price * 100;
   var unit = [1, 5, 10, 25, 100, 500, 1000, 2000, 10000];
   for (var i=8;i>=0;i--) {
       while (after[i][1] >= unit[i] && amount - unit[i] >= 0) {
