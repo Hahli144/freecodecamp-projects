@@ -11,11 +11,10 @@ function checkCashRegister(price, cash, cid) {
   }
   if (amount != 0)
     return {status: "INSUFFICIENT_FUNDS", change: []};
-  for (var j=0;j<cid.length;j++)
-    after[j][1] = cid[j][1] - after[j][1]
-  cid.forEach((x, k) => {
+  after.forEach((x, k) => {
+    x[1] = cid[k][1] - x[1]
     x[1] /= 100
-    after[k][1] /= 100
+    cid[k][1] /= 100
   });
   if (cid.every((x, k) => x[1] == after[k][1]))
     return {status: "CLOSED", change: cid};
