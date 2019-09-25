@@ -78,7 +78,7 @@ function newQuote() {
 
 $(document).ready(function() {
   newQuote();
-});
+
 
 $("#new-quote").click(function() {
   $("#text").animate({
@@ -96,4 +96,5 @@ $("#new-quote").click(function() {
     opacity: "1"
   }, "slow");
     setTimeout(function(){$("#new-quote").attr("class", "btn btn-lg btn-block").prop("disabled", false); }, 1200);
+});
 });
