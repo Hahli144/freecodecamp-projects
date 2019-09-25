@@ -33,3 +33,7 @@ background: #FBCC00;
   background: #5C9EDA;
   color: white;
 }
+
+#tweet-button {
+  font-size: 20px;
+}
