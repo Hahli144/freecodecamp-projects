@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+body {
+  font-family: Aldrich;
+  font-size: 12px;
+  background: #ebe8da;
+}
+#preview {
+  border: solid black;
+  box-shadow: 5px 10px;
+  background: #a3a093;
+  padding: 0 20px 0;
+  width: 600px;
+}
+#editor {
+  width: 300px;
+  height: 100%;
+  padding: 5px 5px 0;
+}
+code {
+  background: white;
+  border-radius: 4px;
+  font-size: 0.9em;
+  padding: 2px 3px;
+  font-weight: bold;
+}
+blockquote {
+  border: 1px solid;
+  box-shadow: 3px 3px;
+  background: #8f8c7f;
+  border-radius: 3px;
+}
+pre {
+  border: 1px solid;
+  border-radius: 4px;
+  background: white;
+  padding: 2px 3px;
+}
+img {
+  height: 150px;
+}
+#title {
+  text-align: center;
+}
+#react {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  #editor {
+    width: 25vw;
+  }
+  #preview {
+    width: 50vw;
+  }
+}
+@media screen and (max-height: 500px) {
+  body {
+    font-size: calc(5px + 1.4vh);
+  }
+}
