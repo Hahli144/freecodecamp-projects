@@ -34,6 +34,7 @@ pre {
   border-radius: 4px;
   background: white;
   padding: 2px 3px;
+  overflow: scroll;
 }
 img {
   height: 150px;
