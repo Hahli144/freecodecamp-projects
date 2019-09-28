@@ -1,7 +1,8 @@
 var placeholderText = `# This is my Markdown Previewer.
 ***
 ## Here's some stuff you can do:
-Hashtags of varying amounts, with text separated by a space make different sized headers: \`# text\`, \`## text\`, \`### text\`...
+Hashtags of varying amounts, with text separated by a space make different sized headers:
+\`# text\`, \`## text\`, \`### text\`...
 # 1 Hashtag,
 ## 2 hashtags,
 ### 3 Hashtags!
