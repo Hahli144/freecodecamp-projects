@@ -1,0 +1,67 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #edd2a7;
+  width: 100%;
+  display: flex;
+  z-index: 2;
+}
+#title {
+  margin: 30px;
+}
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  margin: 20px 0px 0px 80px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #4d350f;
+}
+div {
+  position: relative;
+  top: 200px;
+  text-align: center;
+}
+h2 {
+  position: relative;
+  top: 100px;
+  font-size: 40px;
+  text-align: center;
+  color: #35240b
+}
+#text {
+  position: relative;
+  top: 100px;
+  font-size: 20px;
+  color: #35240b;
+  margin: 30px 100px 20px 100px;
+}
+
+#form {
+  position: relative;
+  top: 300px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#signup {
+  position: relative;
+  top: 300px;
+  text-align: center;
+  font-size: 40px;
+}
+@media (max-width: 560px) {
+  #video {
+    width: 100vw;
+  }
+}
+html {
+  background: linear-gradient(30deg, #714d17, #e8c48c);
+  height: 100vw;
+}
