@@ -1,0 +1,41 @@
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  position: relative;
+  margin: auto;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #555555
+}
+#img-caption {
+  text-align: center;
+  font-size: 18px;
+}
+#title {
+  background-color: #CCCCCC;
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  font-size: 70px;
+  border-radius: 5px;
+}
+
+main {
+  background-color: #ECECEC
+}
+#tribute-info {
+  background-color: #CDCDCD;
+  padding-top: 50px;
+  font-size: 35px;
+  text-align: center;
+  color: #262626;
+}
+
+#wiki {
+  text-align: center;
+  background-color: #CDCDCD;
+  position: relative;
+  bottom: 35px;
+  padding: 80px 0px 20px 0px;
+}
