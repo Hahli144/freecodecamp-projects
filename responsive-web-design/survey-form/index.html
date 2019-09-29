@@ -1,0 +1,33 @@
+<link type="text/css" rel="stylesheet" href="style.css" />
+<h1 id="title">Coding Experience Survey</h1>
+<main>
+  <p id="description">Tell us about your skills and knowledge in coding.</p>
+  <form id="survey-form">
+    <label for="name" id="name-label">Name:</label>
+    <input id="name" placeholder="*Enter your name" required><br>
+    <label for="email" id="email-label">Email address:</label>
+    <input id="email" placeholder="*Enter your email address" required type="email"><br>
+    <label for="number" id="number-label">Age:</label>
+    <input id="number" placeholder="Age" type="number" min="1" max="120"><br>
+    <label for="dropdown" id="level-label">What is your current skill level at coding?</label><br>
+    <select id="dropdown">
+      <option disabled selected>Select an option</option>
+      <option>Beginner</option>
+      <option>Novice</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+      <option>Expert</option>
+    </select><br>
+    <label for="work-experience">Do you have job experience related to coding?</label><br>
+    <label for="yes"><input id="yes" type="radio" name="work-experience" value="Yes">Yes</label>
+    <label for="no"><input id="no" type="radio" name="work-experience" value="No" checked>No</label><br>
+    <label for="languages">Which languages do you have experience with?</label><br>
+    <label for="html"><input id="html" type="checkbox" name="languages" value="Html">Html</label>
+    <label for="javascript"><input id="javascript" type="checkbox" name="languages" value="Javascript">Javascript</label>
+    <label for="python"><input id="python" type="checkbox" name="languages" value="Python">Python</label>
+    <label for="C"><input id="C" type="checkbox" name="languages" value="C">C</label><br>
+    <label for="textarea">Tell us a bit about how you learned to code:</label><br>
+    <textarea id="textarea" placeholder="Enter text here"></textarea><br>
+    <button id="submit">Submit</button>
+  </form>
+</main>
