@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
+body {
+  background: gray;
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+}
+#output, #display {
+  grid-column-start: span 4;
+  order: 0;
+  background: #1a1a1a;
+  color: white;
+  font-size: 25px;
+  text-align: right;
+}
+#display {
+  order: 1;
+  border-top: 1px solid;
+}
+#calculator {
+  border: 2px solid;
+  width: 400px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 15% 15%;
+  grid-template-columns: 25% 25% 25% 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -200px;
+}
+#seven {
+  order: 2;
+}
+#eight {
+  order: 3;
+}
+#nine {
+  order: 4;
+}
+#add {
+  order: 5;
+  background: #809fff;
+}
+#four {
+  order: 6;
+}
+#five {
+  order: 7;
+}
+#six {
+  order: 8;
+}
+#subtract {
+  order: 9;
+  background: #809fff;
+}
+#one {
+  order: 10;
+}
+#two {
+  order: 11;
+}
+#three {
+  order: 12;
+}
+#multiply {
+  order: 13;
+  background: #809fff;
+}
+#divide {
+  order: 16;
+  background: #809fff;
+}
+#zero {
+  order: 15;
+}
+#clear {
+  order: 18;
+  grid-column-end: span 3;
+  background: #ff8080;
+}
+#equals {
+  order: 17;
+  grid-row-end: span 2;
+  background: #9fff80;
+}
+#decimal {
+  order: 14;
+  background: #809fff;
+}
+button {
+  border: 1px solid;
+  border-radius: 8px;
+  background: #ffdf80;
+  font-size: 25px;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -340px 0 0 -235px;
+}
